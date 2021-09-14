@@ -1,0 +1,47 @@
+﻿<Window x:Class="Layout_Converter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Layout_Converter" xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
+        mc:Ignorable="d"
+        Title="Android Layout Converter (AXML -> C#)" WindowState="Maximized" Height="450" Width="800">
+    <DockPanel>
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem>
+                <TextBlock x:Name="StatusLabel" Text="Status: OK"/> 
+            </StatusBarItem>
+        </StatusBar>
+        <Menu DockPanel.Dock="Top" Padding="2">
+            <MenuItem Header="_File">
+                <MenuItem x:Name="MenuButtonOpen" Click="MenuButtonOpen_Click" Header="_Open" />
+                <MenuItem Header="_Load Examples">
+                    <MenuItem x:Name="MenuButtonLoadEx1" Click="MenuButtonLoadEx1_Click" Header="_Load example 1" />
+                    <MenuItem x:Name="MenuButtonLoadEx2" Click="MenuButtonLoadEx2_Click"  Header="_Load example 2" />
+                </MenuItem>
+                <MenuItem x:Name="MenuButtonSave" Click="MenuButtonSave_Click" Header="_Save" />
+                <MenuItem Header="_Copy To Clipboard">
+                    <MenuItem x:Name="MenuButtonCopyToClipboardComplete" Click="MenuButtonCopyToClipboardComplete_Click" Header="_Complete" />
+                    <MenuItem x:Name="MenuButtonCopyToClipboardConstraintSets" Click="MenuButtonCopyToClipboardConstraintSets_Click" Header="_ConstraintSets" />
+                    <MenuItem x:Name="MenuButtonCopyToClipboardVariables" Click="MenuButtonCopyToClipboardVariables_Click" Header="_Variable-Declarations" />
+                    <MenuItem x:Name="MenuButtonCopyToClipboardViewDef" Click="MenuButtonCopyToClipboardViewDef_Click" Header="_View-Definitions" />
+                </MenuItem>
+                <MenuItem x:Name="MenuButtonExit" Click="MenuButtonExit_Click" Header="_Exit" />
+            </MenuItem>
+        </Menu>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <GroupBox Header="AXML" FontWeight="Bold">
+                <avalonEdit:TextEditor x:Name="TextAXML" FontFamily="Consolas" />
+            </GroupBox>
+
+            <GroupBox Header="Code Behind" FontWeight="Bold" Grid.Column="1">
+                <avalonEdit:TextEditor x:Name="TextResult" FontWeight="Normal" IsReadOnly="True" FontFamily="Consolas" />
+            </GroupBox>
+        </Grid>               
+    </DockPanel>
+</Window>
