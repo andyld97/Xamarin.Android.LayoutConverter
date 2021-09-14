@@ -1,5 +1,5 @@
 # Xamarin.Android.LayoutConverter
-
+![alt text](https://github.com/andyld97/Xamarin.Android.LayoutConverter/blob/dev/Assets/screenshot.png)
 ## Why is this necessary?
 
 Normally it is not necessary to declare Android layouts via codebehind, because after all there are *.axml files that can be easily edited with the layout editor. However, in some cases it may be useful to define a layout via codebehind.
@@ -18,7 +18,7 @@ The code should compile in most cases, but usually needs some rework, because no
 If you want, you are welcome to implement further properties, but I will also extend the program from time to time.
 
 ## Features
-- :heavy_check_mark: ConstraintLayouts are supported using ConstraintSets!
-- :heavy_check_mark: Nested layouts will also work!
-- :heavy_check_mark: Copy parts or everything of the generated code to the clipboard or you can export it as a C#-File!
-- :heavy_check_mark: Example files avaiable in the menu!
+:heavy_check_mark: ConstraintLayouts are supported using ConstraintSets!  
+:heavy_check_mark: Nested layouts will also work!  
+:heavy_check_mark: Copy parts or everything of the generated code to the clipboard or you can export it as a C#-File!  
+:heavy_check_mark: Example files avaiable in the menu!  
