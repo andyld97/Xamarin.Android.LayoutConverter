@@ -21,4 +21,4 @@ If you want, you are welcome to implement further properties, but I will also ex
 :heavy_check_mark: ConstraintLayouts are supported using ConstraintSets!  
 :heavy_check_mark: Nested layouts will also work!  
 :heavy_check_mark: Copy parts or everything of the generated code to the clipboard or you can export it as a C#-File!  
-:heavy_check_mark: Example files avaiable in the menu!  
+:heavy_check_mark: Example files are avaiable in the menu!  
